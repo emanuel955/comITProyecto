@@ -1,7 +1,7 @@
 listadoCelulares = [
 		{
 			"marca": "Motorola",
-			"modelo": "G 4 PLAY",
+			"modelo": "G4 PLAY",
 			"sistema_operativo": "Android",
 			"pantalla_pulgadas": 5,
 			"pantalla_resolucion": "1280x720",
@@ -89,13 +89,13 @@ listadoCelulares = [
 	];
 
 
- function agregarElementos() {
-	var p = document.createElement("li");
-	p.id = "nuevo";
+function agregarElementos() {
+	var lista = document.createElement("li");
+	lista.id = "nuevo";
 	var t = document.createTextNode(listadoCelulares[0].marca);
-	p.appendChild(t);
-	var m = document.createTextNode(listadoCelulares[0].modelo);
-	p.appendChild(m);
+	lista.appendChild(t);
 	var div = document.getElementById("nuevosElementos");
-	div.appendChild(p);
- }
+	div.appendChild(lista);
+}
+
+

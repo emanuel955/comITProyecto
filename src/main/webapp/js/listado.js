@@ -1,7 +1,7 @@
 listadoCelulares = [
 		{
 			"marca": "Motorola",
-			"modelo": "G 4 PLAY",
+			"modelo": "G4 PLAY",
 			"sistema_operativo": "Android",
 			"pantalla_pulgadas": 5,
 			"pantalla_resolucion": "1280x720",
@@ -12,7 +12,7 @@ listadoCelulares = [
 		},
 		{
 			"marca": "Motorola",
-			"modelo": "G 4 PLAY",
+			"modelo": "raizzer",
 			"sistema_operativo": "Android",
 			"pantalla_pulgadas": 5,
 			"pantalla_resolucion": "1280x720",
@@ -24,7 +24,7 @@ listadoCelulares = [
 		{
 			"id": 1,
 			"marca": "Motorola",
-			"modelo": "G 4 PLAY",
+			"modelo": "nexus",
 			"sistema_operativo": "Android",
 			"pantalla_pulgadas": 5,
 			"pantalla_resolucion": "1280x720",
@@ -33,7 +33,9 @@ listadoCelulares = [
 			"camara_frontal_res": "5 Mpx",
 			"memoria_interna": "16 GB",
 			"flash": true
-		},
+		}
+	];
+listaCelulares = [
 		{
 			"id": 2,
 			"marca": "Samsung",
@@ -89,13 +91,43 @@ listadoCelulares = [
 	];
 
 
- function agregarElementos() {
-	var p = document.createElement("li");
-	p.id = "nuevo";
-	var t = document.createTextNode(listadoCelulares[0].marca);
-	p.appendChild(t);
-	var m = document.createTextNode(listadoCelulares[0].modelo);
-	p.appendChild(m);
-	var div = document.getElementById("nuevosElementos");
-	div.appendChild(p);
- }
+function agregarElementos() {
+	
+	
+
+		for(var cont = 0; cont < listadoCelulares.length; cont++){
+			var p = document.createElement("li");
+			var mar = "marca: " + listadoCelulares[cont].marca;
+            var valor = document.createTextNode(mar);
+			p.appendChild(valor);
+			var div = document.getElementById("nuevosElementos");
+			div.appendChild(p);
+
+			var p = document.createElement("li");
+			var mod = "modelo: " + listadoCelulares[cont].modelo;
+			var valor = document.createTextNode(mod);
+			p.appendChild(valor);
+			var div = document.getElementById("nuevosElementos");
+			div.appendChild(p);
+
+
+
+            
+        	if(cont == 0) {
+             break;
+            }
+
+
+		
+	     }
+
+		
+	
+
+
+
+
+
+
+
+}

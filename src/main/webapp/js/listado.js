@@ -33,9 +33,7 @@ listadoCelulares = [
 			"camara_frontal_res": "5 Mpx",
 			"memoria_interna": "16 GB",
 			"flash": true
-		}
-	];
-listaCelulares = [
+		},
 		{
 			"id": 2,
 			"marca": "Samsung",
@@ -88,46 +86,39 @@ listaCelulares = [
 			"memoria_interna": "16 GB",
 			"flash": true
 		}
-	];
+]
 
 
-function agregarElementos() {
+function agregarElementos(indice, botonCelular) {
 	
-	
-
-		for(var cont = 0; cont < listadoCelulares.length; cont++){
+	 		var cel = listadoCelulares[indice];
+			var botonCelular = "nuevosElementos";
+   		    
+		
 			var p = document.createElement("li");
-			var mar = "marca: " + listadoCelulares[cont].marca;
+			var mar = "marca: " + cel.marca;
             var valor = document.createTextNode(mar);
 			p.appendChild(valor);
-			var div = document.getElementById("nuevosElementos");
+			var div = document.getElementById(botonCelular);
 			div.appendChild(p);
+			
 
 			var p = document.createElement("li");
-			var mod = "modelo: " + listadoCelulares[cont].modelo;
+			var mod = "modelo: " + cel.modelo;
 			var valor = document.createTextNode(mod);
 			p.appendChild(valor);
-			var div = document.getElementById("nuevosElementos");
+			var div = document.getElementById(botonCelular);
 			div.appendChild(p);
 
+			
 
+}
 
-            
-        	if(cont == 0) {
-             break;
-            }
+	
+	
+	
+     
 
-
-		
-	     }
-
-		
 	
 
 
-
-
-
-
-
-}

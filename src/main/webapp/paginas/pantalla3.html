@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+		<!-- estilos que necesitan importarse -->
+	<link rel="stylesheet" href="../css/pantalla3.css" />
+</head>
+<body>
+
+
+<input type="text" name="" placeholder="monto neto"></input>
+<input type="button" onclick="nueva_categoria" value="nueva categoria">
+<input type="button" onclick="guardar" value="guardar cambios">
+</br>
+</br>
+
+<form>
+<section id="primero1"><!-- tabla para agregar los ingresos -->
+<fieldset>
+<legend>INGRESOS</legend>
+<table>
+	<tr>
+		<td><input type="date" name="fecha" id="fecha"></input></td>
+		<td><input type="text" name="monto" placeholder="monto" id="monto"></input></td>
+		<td><input type="text" name="subcateg" placeholder="detalles" id="detalles"></input></td>
+		<td><select id="lista">
+				<option>categorias</option>
+				<option>sube</option>
+				<option>refrigerios</option>
+				<option>telefono</option>
+				<option>internet</option>
+			</select></td>
+		</td>
+	</tr>
+	<input type="button"  value="nuevo_ticket" onclick="nuevaFila()" name="algo"></input>
+</table>
+
+	
+
+</fieldset>
+</section> <!-- termina la tabla de ingresos -->
+</form>
+
+</br>
+
+
+
+<section id="primero"><!-- encierra el primer cuadro  -->
+<fieldset>
+<legend> CATEGORIAS </legend>
+<table>
+	<tr>
+		<td><strong></strong></td>
+		<td><strong>TOTAL</strong></td>
+		<td><strong>MES</strong></td>
+	</tr>
+
+	<tr class="botones">
+	<td>SUBE</td>
+		<td><input type="text"  name="monto"></input></td>
+		<td><select>
+				<option></option>
+				<option>enero</option>
+				<option>febrero</option>
+				<option>marzo</option>
+				<option>abril</option>
+				<option>mayo</option>
+				<option>junio</option>
+				<option>julio</option>
+				<option>agosto</option>
+				<option>septiempre</option>
+				<option>octubre</option>
+				<option>noviembre</option>
+				<option>diciembre</option>
+			</select></td>
+	</tr>
+
+	<tr class="botones">
+		<td>REFRIGERIOS</td>
+		<td><input type="text"  name="monto"></input></td>
+		<td><select>
+				<option></option>
+				<option>enero</option>
+				<option>febrero</option>
+				<option>marzo</option>
+				<option>abril</option>
+				<option>mayo</option>
+				<option>junio</option>
+				<option>julio</option>
+				<option>agosto</option>
+				<option>septiempre</option>
+				<option>octubre</option>
+				<option>noviembre</option>
+				<option>diciembre</option>
+			</select></td>
+	</tr>
+
+	<tr class="botones">
+		<td>CELULAR</td>
+		<td><input type="text"  name="monto"></input></td>
+		<td><select>
+				<option></option>
+				<option>enero</option>
+				<option>febrero</option>
+				<option>marzo</option>
+				<option>abril</option>
+				<option>mayo</option>
+				<option>junio</option>
+				<option>julio</option>
+				<option>agosto</option>
+				<option>septiempre</option>
+				<option>octubre</option>
+				<option>noviembre</option>
+				<option>diciembre</option>
+			</select></td>
+	</tr>
+
+	<div id="nuevaFilas">
+	</div>
+</table>
+</fieldset>
+</section><!-- termina de encerrar el primer cuadro -->
+
+</br>
+
+<section id="segundo"><!-- encierra al segundo cuadro -->
+<fieldset>
+<legend> BALANCES </legend>
+<table>
+	<tr>
+		<td><strong>MESES</strong></td>
+		<td><strong>TOTAL MES</strong></td>
+		<td><strong>ACUMULADO</strong></td>
+	</tr>
+
+</table>
+</fieldset>
+</section><!-- termina de encerrar al segundo cuadro -->
+
+
+
+
+
+<section id="tercer"> <!-- engloba al tercer y ultimo cuadro cuadro -->
+
+<fieldset>
+<legend> HISTORIAL </legend>
+<table>
+	<tr>
+		<td><strong>FECHA</strong></td>
+		<td><strong>DETALLES</strong></td>
+		<td><strong>MONTO</strong></td>
+		<td><strong>CATEGORIA</strong></td>
+	</tr>
+
+	<div id="tablas">
+	</div>
+</table>
+</fieldset>
+</section> <!-- termina de encerrar al tercer y ultimo  cuadro -->
+
+
+
+
+</body>
+</html>

@@ -2,49 +2,55 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+
+    <title>inicio</title>
 	<!-- archivos js que serÃ¡n usados -->
 	<script type="text/javascript" src="js/listado.js" ></script>
 	
 	<!-- estilos que necesitan importarse -->
-	<link rel="stylesheet" href="css/comunidadIT.css" />
+	<link rel="stylesheet" href="css/principal.css" />
+
 
 </head>
 <body>
 
+<h1 ID="titulo">COST CONTROL</H1>
 
-   <div id= "nuevosElementos"
-	   </div>
-	   
-	   
-	   <input type="button" onclick="agregarElementos()" title="Al presionar este botÃ³n se ejecutarÃ¡ el mÃ©todo indicado en onclick" value="Agregar elementos"></input><br>
-	<br>
+<section id="formulario">
+	<form action=""><!-- esta es la barra para inciar sesion -->
+		<fieldset>
+		<legend> IDENTIFICARME </legend>
+			</br>
+			<input type= "text" name="usuario"  placeholder= "usuario"></input></br>
+			</br>
+			<input type= "password" name="contraseña"  placeholder= "clave"></input></br>
+			</br>
+			<input type= "submit" value = "entrar" onclick="entrar"></input>
+			<input type= "submit" value="recuperar clave" class="bot"></input></br>
+			</br>
+		</fieldset>
+		</br>
+	</form>
+</section>
 
 
+<section id="registrar">
+	<form action=""><!-- aca se van a registrar los usuarios-->
+		<fieldset id="cuadrado">
+		<legend> REGISTRARME </legend>
+			<input type= "text" name="nombre usuario"  placeholder= "nombre de usuario"></input></br>
+			</br>
+			<input type= "text" name="email"  placeholder= "e-mail"></input></br>
+			</br>
+			<input type= "password" name = "contraseña1" placeholder= "clave"></input></br>
+			</br>
+			<input type= "password" name = "contraseña2" placeholder= "repita clave"></input></br>
+			</br>
+			<input type= "submit" value = "registrarse"></input>
+		</fieldset>
+	</form>
+</section>
 
-
-
-   
-   <h1>Elija un modelo</h1>
-   
-  <div id= "samsung"> 
-    <a href="paginas/lista2.html"><img class= "achicar" src= "http://s7d2.scene7.com/is/image/SamsungUS/samsung-logo-191-1"/></a>
-  </div>  
-  <div id="motorola">
-    <a href="paginas/lista.html"><img src= "http://www.procomit.cl/wp-content/uploads/2015/01/logo-motdealer.gif"/></a>
-  </div>  
-  <div id= "iphone"> 
-    <a href="paginas/lista3.html"><img src= "http://www.idpelplatanar.com/images//Logo-iPhone13.png"/></a>
-  </div>
-  <div id= "microsoft">	
-	<a href="paginas/lista4.html"><img src= "http://www.novaeragc.com/wp-content/uploads/2011/08/micro1987.png"/></a>
-  </div>  
-  <div id= "huawei">	  
-	<a href="paginas/lista5.html"><img src= "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR7dilXd_kxbKBbFh8HtIbSOpv0g9Y3iNydCaVzj24X-hEg-qDJMw"/></a>
-  </div>	
-  <div id= "nokia">	
-	<a href="paginas/lista6.html"><img src="http://img.webme.com/pic/i/iglesiajesusluzdelasnaciones/nokia.jpg"/></a>
-  </div>
 
 </body>
 </html>

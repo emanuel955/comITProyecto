@@ -1,0 +1,86 @@
+body{
+	background-image: url(6.png);
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+section#formulario{
+	position: absolute;
+	top: 200px;
+	left: 300px;
+	width: 290px;
+	height: 180px;
+	border-radius: 10px;
+	padding-top: 15px;
+	padding-left: 5px;
+	background-color: rgba(0,0,0,0.5);
+
+}
+
+section#registrar{
+	position: absolute;
+	top: 200px;
+	left: 700px;
+	width: 290px;
+	height: 240px;
+	border-radius: 10px;
+	padding-top: 15px;
+	padding-left: 5px;
+	background-color: rgba(0,0,0,0.5);
+
+
+}
+fieldset{
+	border-radius: 15px;
+	margin-left: 5px;
+	margin-right: 10px;
+	padding-left: 5px;
+	padding-right: 5px; 
+	
+}
+fieldset#cuadrado{
+	height: 230px;
+	
+
+}
+legend{
+	text-align: center;
+	color: white;
+
+}
+
+input[type= "text"], input[type="password"]{
+
+	width: 260px;
+	height: 20px;
+	border-radius: 5px;
+	background-color: #DAD9D9;
+
+}
+
+input{
+	width: 100px;
+	height: 25px;
+	border-radius: 5px;
+	box-shadow: 0px, 4px, 0px;
+	background-color: ‎#FF2702;
+
+}
+
+h1#titulo{
+	color: #FCFCFC;
+	text-align: center;
+	font-family: fantasy;
+	background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#080bd3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#080bd3',GradientType=0 ); /* IE6-9 */
+}
+
+#tabla{
+	height: 100px;
+	overflow: scroll;
+	width: 100px;
+}

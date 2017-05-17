@@ -1,86 +1,55 @@
+<!DOCTYPE html>
 <html>
-
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-	<!-- archivos js que serán usados -->
-	<script type="text/javascript" src="js/listado.js" ></script>
-	
-	<!-- estilos que necesitan importarse -->
-	<link href="../css/lista.css" type="text/css" rel="stylesheet"/>
-
+<head>
+    <meta charset="utf-8">
+    <title>javascript - Obtener el valor de un input type=text de varias maneras</title>
+    <script>
+    function capturar()
+    {
+        // obtenemos e valor por el numero de elemento
+        var porElementos=document.forms["form1"].elements[0].value;
+        // Obtenemos el valor por el id
+        var porId=document.getElementById("nombre").value;
+        // Obtenemos el valor por el Nombre
+        var porNombre=document.getElementsByName("nombre")[0].value;
+        // Obtenemos el valor por el tipo de tag
+        var porTagName=document.getElementsByTagName("input")[0].value;
+        // Obtenemos el valor por el nombre de la clase
+        var porClassName=document.getElementsByClassName("formulario")[0].value;
+ 
+        document.getElementById("resultado").innerHTML=" \
+            Por elementos: "+porElementos+" \
+            <br>Por ID: "+porId+" \
+            <br>Por Nombre: "+porNombre+" \
+            <br>Por TagName: "+porTagName+" \
+            <br>Por ClassName: "+porClassName;
+    }
+    </script>
+ 
+    <style>
+        form   {width:250px;height:180px;border:1px solid #ccc;padding:10px;}
+    </style>
 </head>
-	
+ 
 <body>
-
-    <ul class= "celulares">
-       <img src= "http://cdn1.smart-gsm.com/picture/motorola-moto-g4.jpg"/><br/>
-       <li>marca: Motorola,</li>
-	   <li>modelo: G 4 PLAY,</li>
-       <li>sistema_operativo: Android,</li>
-	   <li>pantalla_pulgadas: 5",</li>
-	   <li>pantalla_resolucion: 1280x720,</li>
-	   <li>camara_resolucion": 8 Mpx,</li>
-	   <li>camara_frontal: true,</li>
-	   <li>camara_frontal_res: 5 Mpx,</li>
-	   <li>memoria_interna": 16 GB</li>
-	   
-	   <div id= "nuevosElementos"
-	   </div>
-	   
-	   <input type="button" onclick = "agregarElementos()" title="Al presionar este botón se ejecutará el método indicado en onclick" value="Agregar elementos"></input><br/>
-	<br/>
-	 </ul>
-     
-      
-     <ul class= "celulares">
-       <img src= "http://cdn1.smart-gsm.com/picture/motorola-razr.jpg"/><br/>
-	   <li>marca: Motorola,</li>
-	   <li>modelo: DARZ,</li>
-	   <li>sistema_operativo: Android,</li>
-	   <li>pantalla_pulgadas: 5",</li>
-	   <li>pantalla_resolucion: 1280x720,</li>
-	   <li>camara_resolucion: 8 Mpx,</li>
-	   <li>camara_frontal: true,</li>
-	   <li>camara_frontal_res: 5 Mpx,</li>
-	   <li>memoria_interna: 16 GB</li>
-	   <input type="button" onclick="agregarElementos()" title="Al presionar este botón se ejecutará el método indicado en onclick" value="Agregar elementos"></input><br>
-	<br>
-	 </ul>
-      
-     <ul class= "celulares">
-	   <img src= "http://cdn1.smart-gsm.com/picture/motorola-moto-g.jpg"/></br>
-	   <li>marca: Motorola,</li>
-   	   <li>modelo: MOTO G,</li>
-	   <li>sistema_operativo: Android,</li>
-	   <li>pantalla_pulgadas: 5",</li>
-	   <li>pantalla_resolucion: 1280x720,</li>
-	   <li>camara_resolucio: 8 Mpx,</li>
-	   <li>camara_frontal: true,</li>
-	   <li>camara_frontal_res: 5 Mpx,</li>
-	   <li>memoria_interna: 16 GB,</li>
-	   <li>flash: true</li>
-	   <input type="button" onclick="agregarElementos()" title="Al presionar este botón se ejecutará el método indicado en onclick" value="Agregar elementos"></input><br>
-	<br>
-	 </ul>
-	 
-	 <ul class= "celulares">
-	  <img src= "http://cdn1.smart-gsm.com/picture/motorola-moto-x.jpg"/></br>
-	 </ul>
-	
-	 <ul class= "celulares">
-	  <img src= "http://cdn2.gsmarena.com/vv/bigpic/moto-nexus-6.jpg"/></br>
-	 </ul>
-	
-	<ul class= "celulares">
-	  <img id="imgs" src= "http://cdn2.gsmarena.com/vv/bigpic/motorola-droid-maxx.jpg"/></br>
-	 </ul>
-	
-	
-	
-	
-	
-	
-	
+    <h1>Obtener el valor de un input type=text de varias maneras</h1>
+    <form id="form1">
+        Nombre:<br><input type="text" name="nombre" value="jose" id="nombre" class="formulario">
+ 
+        <p><input type="checkbox" name="acepto" id="acepto" class="formulario_check"> Acepto el contrato</p>
+ 
+        <p>Deacuerdo: Si<input type="radio" name="deacuerdo" value="si"> No<input type="radio" name="deacuerdo" value="no"></p>
+ 
+        <p>
+        <select name="seleccion" id="seleccion" class="formulario_select">
+            <option value="1">primera</option>
+            <option value="2">segunda</option>
+        </select>
+        </p>
+    </form>
+    <input type="button" value="obtener el nombre" onclick="capturar()">
+    <div id="resultado"></div>
+ 
+    <p><a href="http://www.lawebdelprogramador.com">http://www.lawebdelprogramador.com</a></p>
 </body>
 </html>
